@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "web" {
-  ami           = "ami-06067086cf86c58e6"  
+  ami           = "ami-06067086cf86c58e6"  //change this as per your aws account n region 
   instance_type = "t2.micro"
 
   tags = {
