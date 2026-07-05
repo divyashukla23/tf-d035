@@ -8,14 +8,15 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = var.aws_region
 }
 
 resource "aws_instance" "web" {
-  ami           = "ami-06067086cf86c58e6"  //change this as per your aws account n region 
-  instance_type = "t2.micro"
+  ami           = var.ami_id
+  instance_type = var.instance_type
 
   tags = {
-    Name = "TerraformDemo"
+    Name        = var.instance_name
+    Environment = var.environment
   }
 }
