@@ -28,3 +28,14 @@ variable "environment" {
   type        = string
   default     = "dev"
 }
+
+
+
+variable "vpc_id" {
+  description = "Your VPC ID"
+}
+
+variable "subnets" {
+  description = "List of subnets"
+  type        = list(string)
+}
